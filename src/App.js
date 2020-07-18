@@ -22,8 +22,6 @@ function App() {
                 <Header />
                 <div className ='main-div'>
                 <Categories />
-                <Grid item xs={3}>
-                        </Grid>
                 <Products />
                 </div>
                 <Footer />
