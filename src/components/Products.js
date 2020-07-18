@@ -8,6 +8,8 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
+import {Grid } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
     root: {
@@ -45,15 +47,25 @@ function Products(props) {
                             <Typography gutterBottom variant="h5" component="h2">
                                 {props.products[i].price}
                             </Typography>
+                            <Typography color="textPrimary" component="p">
+                                    Quantity: {props.products[i].stock}
+                                </Typography>
                             <Typography variant="body2" color="textSecondary" component="p">
                                 {props.products[i].description}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                     <CardActions>
-                        <Button size="small" color="primary">
-                            Add To Cart
-                        </Button>
+                        <Button size="small" color="primary"
+                         onClick={() => { 
+                            props.dispatch({
+                                type: 'ADD_TO_CART',
+                                payload: props.products[i]
+                            });
+                            
+                        }} 
+                        disabled={props.products[i].stock < 1 ? true : false}
+                        >Add To Cart</Button>
                         <Button size="small" color="primary">
                             View Details
                         </Button>
