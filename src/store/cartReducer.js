@@ -21,6 +21,11 @@ const reducer = (state = initState, action) => {
             break;
 
         case 'REMOVE_FROM_CART':
+            // newState.cartCount--;
+            // newState.cartContents = newState.cartContents.filter((val) => {
+            //     return val.name !== action.payload;
+            // });
+            // break;
             for (let i = 0; i < newState.cartContents.length; i++) {
                 if (action.payload.name === newState.cartContents[i].name) {
                   newState.cartContents.splice(i, 1);
@@ -30,7 +35,6 @@ const reducer = (state = initState, action) => {
                   break;
                 }
               }
-            break;
         default:
             break;
     }

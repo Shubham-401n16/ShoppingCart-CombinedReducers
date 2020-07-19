@@ -2,13 +2,14 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import './styles/styles.scss';
-import {Grid} from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 
 import Products from './components/Products';
 import Categories from './components/Categories';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import SimpleCart from './components/SimpleCart';
 
 
 // Connecting our app to our global state redux store
@@ -22,6 +23,7 @@ function App() {
                 <Header />
                 <div className ='main-div'>
                 <Categories />
+                <SimpleCart/>
                 <Products />
                 </div>
                 <Footer />

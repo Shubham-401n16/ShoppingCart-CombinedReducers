@@ -40,7 +40,7 @@ function SimpleCart(props) {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Your Cart</Typography>
+          <Typography>Items</Typography>
       </AccordionSummary>
       <AccordionDetails>
         <Grid container>
