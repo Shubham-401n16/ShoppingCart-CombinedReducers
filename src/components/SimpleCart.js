@@ -18,7 +18,6 @@ function SimpleCart(props) {
         </Grid>
         <Grid item xs={3}>
           <Button 
-            className="removeFromCartButton"
             onClick={(e) => {
               props.dispatch({
                 type: 'REMOVE_FROM_CART',
@@ -38,7 +37,6 @@ function SimpleCart(props) {
       <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
-          id="panel1a-header"
         >
           <Typography>Items</Typography>
       </AccordionSummary>
